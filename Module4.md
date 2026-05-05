@@ -116,7 +116,7 @@ The access point also generates the PTK using the same inputs (PMK, ANonce, SNon
 4. Message 4 (Client → AP):  
 The client confirms that the keys have been installed successfully and sends a final acknowledgment to the access point.
 
-### Keys derived during the process:
+Keys derived during the process:
 
 1. PMK (Pairwise Master Key):  
 This is the main secret key derived from the Wi-Fi password or authentication server. It is used as input for generating other keys.
