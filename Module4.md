@@ -104,16 +104,16 @@ After successful association and security setup, the client can start sending an
 
 The EAPOL 4-way handshake is a process used in Wi-Fi security (WPA/WPA2/WPA3) to establish secure encryption keys between a client (supplicant) and an access point (authenticator). It ensures that both sides have the same secret keys without directly sending the main password over the air.
 
-1. Message 1 (AP → Client):  
+1. Message 1 (AP -> Client):  
 The access point sends a random number called ANonce (Authenticator Nonce) to the client. This is used to start the key generation process.
 
-2. Message 2 (Client → AP):  
+2. Message 2 (Client -> AP):  
 The client generates its own random number called SNonce (Supplicant Nonce). Using ANonce, SNonce, and the pre-shared key (PMK), the client creates a Pairwise Transient Key (PTK). The client then sends SNonce along with a Message Integrity Code (MIC) to the access point.
 
-3. Message 3 (AP → Client):  
+3. Message 3 (AP -> Client):  
 The access point also generates the PTK using the same inputs (PMK, ANonce, SNonce). It verifies the MIC from the client to confirm authenticity. Then it sends the Group Temporal Key (GTK) and another MIC to the client. This message also instructs the client to install the keys.
 
-4. Message 4 (Client → AP):  
+4. Message 4 (Client -> AP):  
 The client confirms that the keys have been installed successfully and sends a final acknowledgment to the access point.
 
 Keys derived during the process:
